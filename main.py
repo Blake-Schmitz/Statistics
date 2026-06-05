@@ -35,7 +35,7 @@ def short(request: OutliersRequest):
 
 @app.post('/threshold/')
 def threshold(request: OutliersRequest, threshold: float=0):
-    result = outliers.short(request.data, threshold)
+    result = outliers.threshold(request.data, threshold)
     return {'result': result['result'], 'percent': result['percent']}
 
 
